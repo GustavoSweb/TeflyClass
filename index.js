@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require("dotenv").config()
 const sequelize = require("sequelize")
 const express = require("express")
@@ -18,6 +19,12 @@ const ejs = require("ejs");
         console.log("Houve um erro", err)
     }
 })();
+=======
+const express = require("express")
+const app = express()
+require("dotenv").config()
+const ejs = require("ejs")
+>>>>>>> 4583129a15763a46e39944fbe6b906a823b05308
 
 app.set("view engine", "ejs")
 app.get("/", (req, res)=> {

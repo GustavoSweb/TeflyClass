@@ -1,7 +1,11 @@
 const sequelize = require("sequelize")
 const connection = require("../database/database")
 
+<<<<<<< HEAD
 const Activity = connection.define("activity", {
+=======
+connection.define("Activity", {
+>>>>>>> 4583129a15763a46e39944fbe6b906a823b05308
     title:{
         type: sequelize.STRING,
         allowNull: false
@@ -30,7 +34,11 @@ const Activity = connection.define("activity", {
         type: sequelize.STRING,
         allowNull: false
     }
+<<<<<<< HEAD
 })
 Activity.sync({force:false})
 
 module.exports = Activity
+=======
+})
+>>>>>>> 4583129a15763a46e39944fbe6b906a823b05308
