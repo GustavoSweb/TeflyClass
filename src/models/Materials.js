@@ -1,6 +1,7 @@
 const sequelize = require("sequelize")
 const connection = require("../database/database")
-
+const Activity = require("./Activity")
+const Projects = require("./Projects")
 const Materials = connection.define("materials", {
     name: {
         type: sequelize.STRING,
@@ -19,5 +20,10 @@ const Materials = connection.define("materials", {
         allowNull: false
     }
 })
+Activity.belongsTo(Materials)
+Projects.belongsTo(Materials)
+Materials.hasMany(Activity)
+Materials.hasMany(Projects)
+
 Materials.sync({force:false})
 module.exports = Materials

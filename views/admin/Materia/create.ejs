@@ -1,0 +1,29 @@
+<%- include("../../partials/header") %>
+    <div class="container">
+        <div class="card mt-5" >
+            <div class="card-body">
+                <div class="card-title">
+                    <h2>Cadastro de materias</h2>
+                </div>
+                <form action="/materia/register" method="post">
+                    <p class="form-label mt-3">Nome</p>
+                    <input type="text" class="form-control mb-3" name="name">
+                    <p class="form-label">Descrição</p>
+                    <textarea name="description" class="form-control mb-3" cols="30" rows="10"></textarea>
+                    <p class="form-label">Professor</p>
+                    <input type="text" class="form-control mb-3" name="teacher">
+                    <p class="form-label">Nivel de importancia</p>
+                    <select class="form-select mb-4" name="level">
+                        <option value="">Importante</option>
+                        <option value="">Normal</option>
+                        <option value="">Eletiva</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </form>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+<%- include("../../partials/footer") %>

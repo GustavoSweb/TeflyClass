@@ -36,3 +36,4 @@ const Projects = connection.define("projects", {
     }
 })
 Projects.sync({force:false})
+module.exports = Projects
