@@ -1,7 +1,12 @@
 const express = require("express")
 const router = express.Router()
-const {createView, register} = require("../controllers/materiaControl")
-router.get("/create", createView)
-router.post("/register", register)
+const {listMaterials, createView, register, edit, editView, del} = require("../controllers/materiaControl")
 
+router.get("/list", listMaterials)
+router.get("/create", createView)
+router.get("/edit/:id", editView)
+
+router.post("/delete", del)
+router.post("/register", register)
+router.post("/edit", edit)
 module.exports = router

@@ -1,0 +1,36 @@
+<%- include("../../partials/header") %>
+<div class="container">
+    <h1 class="mt-4">Listagen de Materias</h1>
+    <a href="/admin/materia/create" ><button class="btn btn-primary mt-3">Registrar</button></a>
+    <table class="table mt-4">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Professor</th>
+            <th scope="col">Nivel de importancia</th>
+            <th scope="col">Configs</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% dados.forEach((value)=>{%>
+                <tr>
+                    <th scope="row"><%= value.id %></th>
+                    <td><%= value.name %></td>
+                    <td><%= value.description %></td>
+                    <td><%= value.teacher %></td>
+                    <td><%= value.important %></td>
+                    <td>
+                    <a href="/admin/materia/edit/<%= value.id %>"><button class="btn btn-primary">Editar</button></a>
+                    <form action="/admin/materia/delete" method="post">
+                      <input type="hidden" name="id" value="<%= value.id %>">
+                      <button type="submit" class="btn btn-danger">Deletar</button>
+                    </form>
+                  </td>
+                  </tr>        
+            <%}) %>
+        </tbody>
+      </table>
+</div>
+<%- include("../../partials/footer") %>
