@@ -20,6 +20,7 @@ const Materials = connection.define("materials", {
         allowNull: false
     }
 })
+
 Activity.belongsTo(Materials)
 Projects.belongsTo(Materials)
 Materials.hasMany(Activity)

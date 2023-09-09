@@ -5,10 +5,15 @@ const express = require("express")
 const app = express()
 const bodyParser = require("body-parser")
 
+// Models
+
 const connection = require("./src/database/database")
 const activity = require("./src/models/Activity")
 const materials = require("./src/models/Materials")
 const projects = require("./src/models/Projects")
+const user = require("./src/models/Users")
+
+
 // Configs
 
 app.use(bodyParser.urlencoded({extended:false}))

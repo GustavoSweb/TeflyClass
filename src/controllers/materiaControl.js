@@ -17,7 +17,6 @@ const register = async (req, res)=>{
     if (!description || !name || !teacher || !important) return res.redirect("/admin/materia/create")
 
     name = name.split(' ').join('-')
-    parseInt(important)
 
     try{
         Materials.create({name, important, description, teacher})
