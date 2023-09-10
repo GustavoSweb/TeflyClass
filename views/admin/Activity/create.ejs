@@ -6,14 +6,37 @@
                     <h2>Cadastro de atividades</h2>
                 </div>
                 <form action="/admin/activity/register" method="post">
-                    <p class="form-label mt-3">Nome</p>
+                    
+                    <h3 class="mt-5 mb-2">Atividade config</h3>
+                    
+                    <label class="form-label mt-3">Titulo</label>
                     <input type="text" class="form-control mb-3" name="title">
-                    <p class="form-label">Descrição</p>
+                    <label class="form-label">Descrição</label>
                     <textarea name="description" class="form-control mb-3" cols="30" rows="10"></textarea>
-                    <p class="form-label">Professor</p>
-                    <input type="text" class="form-control mb-3" name="teacher">
-                    <p class="form-label">Nivel de importancia</p>
-                    <select class="form-select mb-4" name="important">
+                    
+                    <label class="form-label">Data de envio</label>
+                    <input type="date" class="form-control mb-3" name="sending">
+                    <label class="form-label">Data de entrega</label>
+                    <input type="date" class="form-control" name="deliver">
+                    
+                    
+                    <label class="form-label mt-3">Bimestre</label>
+                    <select class="form-select mb-4" name="bimester">
+                        <option value="1">Bimester</option>
+                        <option value="2">Bimester</option>
+                        <option value="3">Bimester</option>
+                    </select>
+                    
+                    <h3 class="mt-5 mb-5">Usuarios config</h3>
+                    
+                    <label class="form-label">Enviador</label>
+                    <select class="form-select mb-4" name="sender">
+                        <option value="1">Importante</option>
+                        <option value="2">Normal</option>
+                        <option value="3">Eletiva</option>
+                    </select>
+                    <label class="form-label">Produtor</label>
+                    <select class="form-select mb-4" name="producer">
                         <option value="1">Importante</option>
                         <option value="2">Normal</option>
                         <option value="3">Eletiva</option>

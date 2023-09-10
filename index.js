@@ -22,6 +22,7 @@ app.use(bodyParser.json())
 // Routers
 
 app.use("/admin/materia", require("./src/routers/materiaRouter"))
+app.use("/admin/atividade", require("./src/routers/activityRouter"))
 
 
 const ejs = require("ejs");

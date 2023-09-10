@@ -1,6 +1,6 @@
 const sequelize = require("sequelize")
-
-const User = new sequelize.define("user", {
+const connection = require("../database/database")
+const User = connection.define("user", {
     name:{
         type: sequelize.STRING,
         allowNull: false
