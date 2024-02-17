@@ -36,6 +36,9 @@
         />
       </div>
     </div>
+    <select name="" id="" v-model="matterSelect">
+      <option :value="matter.id" v-for="matter in matters" :key="matter.id">{{ matter.name }}</option>
+    </select>
     <div
       @drop.prevent="dropFileOn"
       @dragover.prevent
@@ -64,7 +67,16 @@ export default {
       delivery: "",
       shipping: "",
       file: "",
+      matters: [],
+      matterSelect: ''
     };
+  },
+  async created(){
+      const res = await $fetch("http://localhost:8081/matter", {
+        method: "GET",
+      });
+      this.matters = res
+      console.log(this.matters)
   },
   methods: {
     dropFileOn(e) {
@@ -82,7 +94,7 @@ export default {
           delivery: new Date(this.delivery),
           shipping: new Date(this.shipping),
           bimester_id: 1,
-          matter_id: 1,
+          matter_id: Number(this.matterSelect),
         }),
       };
       const res = await $fetch("http://localhost:8081/activity", options);
@@ -96,6 +108,7 @@ export default {
         body: formData,
       };
       await $fetch("http://localhost:8081/archive", upload);
+      
     },
   },
 };

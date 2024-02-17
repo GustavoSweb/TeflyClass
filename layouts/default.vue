@@ -1,8 +1,12 @@
 <template>
     <div>
-        <h5>teste</h5>
+        <header>
+            
+        </header>
         <slot>
         </slot>
-        
+        <footer>
+
+        </footer>
     </div>
 </template>
