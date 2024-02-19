@@ -12,6 +12,9 @@
       </ButtonDefault>
     </header>
     <slot> </slot>
-    <footer></footer>
+    <footer class="min-h-[373px] flex justify-between bg-c11 px-[90px] pt-[98px]">
+      <h6 class="text-c8 poppins font-semibold"><span class="text-b4">Tefly</span>Class</h6>
+      <div></div>
+    </footer>
   </div>
 </template>
