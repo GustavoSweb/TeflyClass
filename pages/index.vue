@@ -1,22 +1,18 @@
 <template>
-  <h1>PAGINA Principal{{ math }}{{ count }}</h1>
+  <article>
+    <section class="flex items-center flex-col">
+      <h1 class="text-[96px] font-semibold poppins leading-[106.6px]">TeflyClass onde sua<br>vida fica mais facil<span class="text-b4">.</span></h1>
+      <p class="poppins text[20px]">Tenha conhecimento das atividades, projetos e conteúdos escolares!</p>
+    </section>
+  </article>
 </template>
 <script>
-export default {
-  created() {
-    const { exe, math } = useFormation();
-    this.math = math;
-    exe(10);
-  },
-  data() {
-    return {
-      math: 0
-    };
-  },
-  computed:{
-    count(){
-        return this.$store.state.count
-    }
-  }
-};
+export default {};
 </script>
+<style scoped>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins");
+.poppins{
+   font-family: 'Poppins';
+}
+
+</style>

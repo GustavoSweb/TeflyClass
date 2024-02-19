@@ -4,5 +4,13 @@ export default defineNuxtConfig({
   alias: {
     css:'/<rootDir>/asserts/css'
   },
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts'],
+  modules:[['@nuxtjs/tailwindcss',{
+    cssPath: '~/assets/css/main.css',
+    configPath: 'tailwind.config',
+    exposeConfig: false,
+    exposeLevel: 2,
+    config: {},
+    injectPosition: 'first',
+    viewer: true,
+  }]],
 })
