@@ -4,7 +4,7 @@
       class="flex poppins font-semibold justify-between mb-[10vh] items-center md:px-[88px] pt-4"
     >
       <h6 class="text-c5"><span class="text-b9">Tefly</span>Class</h6>
-      <ul class="flex gap-[50%]">
+      <ul class="flex gap-[50%] text-c12">
         <li>Modelo</li>
         <li>Sobre</li>
         <li>Contato</li>
