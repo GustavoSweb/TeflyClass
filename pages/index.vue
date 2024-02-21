@@ -153,7 +153,9 @@
         class="w-full max-w-[1104px] bg-c3 border-2 border-c6 rounded-2xl transform translate-y-[-50px] h-[642px]"
       ></div>
     </div>
-    <section class="bg-b9 p-[10px] mt-[88px] md:p-[88px] flex justify-between max-h-[541px] ">
+    <section
+      class="bg-b9 p-[10px] mt-[88px] md:p-[88px] flex justify-between max-h-[541px]"
+    >
       <div>
         <div>
           <h2
@@ -186,37 +188,103 @@
         </div>
       </div>
       <div class="hidden md:block">
-        <div class="relative w-[434px] h-[536px] bg-[#ffffff] rounded-2xl shadow-md">
-          <div class="absolute top-[-30px] right-[-30px] shadow-sm py-[20px] px-[25px] rounded-2xl bg-c1 flex flex-col gap-2">
-            <div class="flex gap-4"><img src="../asserts/icons/increase.svg" alt=""><h6 class="text-[20px] poppins font-extrabold">500</h6></div>
+        <div
+          class="relative w-[434px] h-[536px] bg-[#ffffff] rounded-2xl shadow-md"
+        >
+          <div
+            class="absolute top-[-30px] right-[-30px] shadow-sm py-[20px] px-[25px] rounded-2xl bg-c1 flex flex-col gap-2"
+          >
+            <div class="flex gap-4">
+              <img src="../asserts/icons/increase.svg" alt="" />
+              <h6 class="text-[20px] poppins font-extrabold">500</h6>
+            </div>
             <div>
-              <h5 class="text-[24px] poppins font-extrabold leading-[20px]">Atividades</h5>
+              <h5 class="text-[24px] poppins font-extrabold leading-[20px]">
+                Atividades
+              </h5>
               <p class="text-c7 poppins font-bold">por ano</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="py-[200px] px-[88px]">
+    <section class="pt-[200px] px-[88px]">
       <div>
-        <h2 class="text-[8vw] md:text-[64px] poppins font-bold leading-[10vw] md:leading-[72px]">Provas feitas com IA<span class="text-b4">.</span></h2>
-        <p class="text-[24px] opensans text-c7">Provas interativas e compartilháveis com<br class="hidden md:block"/> inteligência artificial</p>
+        <h2
+          class="text-[8vw] md:text-[64px] poppins font-bold leading-[10vw] md:leading-[72px]"
+        >
+          Provas feitas com IA<span class="text-b4">.</span>
+        </h2>
+        <p class="text-[24px] opensans text-c7">
+          Provas interativas e compartilháveis com<br class="hidden md:block" />
+          inteligência artificial
+        </p>
       </div>
       <div class="mt-[132px] flex justify-between gap-[122px]">
         <div class="flex w-[100%] flex-col gap-[47px]">
-          <div class="p-[20px] bg-b9 text-white opensans rounded-se-none self-end rounded-2xl">Uma prova sobre a segunda guerra mundial!</div>
-          <div class="p-[20px] bg-c3 text-c10 opensans rounded-ss-none self-start rounded-2xl">Uma prova sobre a segunda guerra mundial!</div>
-          <div class="p-[20px] bg-b9 text-white opensans rounded-se-none self-end rounded-2xl">Uma prova sobre a segunda guerra mundial!</div>
-          <div class="p-[20px] bg-c3 text-c10 opensans rounded-ss-none self-start rounded-2xl">Uma prova sobre a segunda guerra mundial!</div>
-        </div>
-        <div class="hidden md:flex min-w-[366px] h-[312px] bg-c2 shadow-sm rounded-2xl p-[35px]  flex-col">
-          <div><img src="../asserts/icons/flash.svg" alt=""></div>
-          <div class="mt-[44px]">
-            <h5 class="text-c11 text-[24px] poppins font-semibold">Incrivelmente rapido!</h5>
-            <p class="text-c9 text-[16px]">Com este sistema passar no ENEM e Vestibular fica facil!</p>
+          <div
+            class="p-[20px] bg-b9 text-white opensans rounded-se-none self-end rounded-2xl"
+          >
+            Uma prova sobre a segunda guerra mundial!
           </div>
-          <ButtonInlineEmphasis class="mt-[35px]">EXPERIMENTE</ButtonInlineEmphasis>
+          <div
+            class="p-[20px] bg-c3 text-c10 opensans rounded-ss-none self-start rounded-2xl"
+          >
+            Uma prova sobre a segunda guerra mundial!
+          </div>
+          <div
+            class="p-[20px] bg-b9 text-white opensans rounded-se-none self-end rounded-2xl"
+          >
+            Uma prova sobre a segunda guerra mundial!
+          </div>
+          <div
+            class="p-[20px] bg-c3 text-c10 opensans rounded-ss-none self-start rounded-2xl"
+          >
+            Uma prova sobre a segunda guerra mundial!
+          </div>
         </div>
+        <div
+          class="hidden lg:flex min-w-[366px] h-[312px] bg-c2 shadow-sm rounded-2xl p-[35px] flex-col"
+        >
+          <div><img src="../asserts/icons/flash.svg" alt="" /></div>
+          <div class="mt-[44px]">
+            <h5 class="text-c11 text-[24px] poppins font-semibold">
+              Incrivelmente rapido!
+            </h5>
+            <p class="text-c9 text-[16px]">
+              Com este sistema passar no ENEM e Vestibular fica facil!
+            </p>
+          </div>
+          <ButtonInlineEmphasis class="mt-[35px]"
+            >EXPERIMENTE</ButtonInlineEmphasis
+          >
+        </div>
+      </div>
+    </section>
+    <section class="flex justify-center lg:justify-between pt-[250px] pb-[50px] px-[88px]">
+      <div class="hidden lg:block">
+        <img src="../asserts/icons/emailsLeft.svg" alt="Draw" />
+      </div>
+      <div
+        class="flex gap-[36px] flex-col items-center transform translate-y-[-100px]"
+      >
+        <div class="flex flex-col items-center">
+          <h3
+            class="text-[48px] leading-[52.8px] font-bold poppins text-center"
+          >
+            Venha fazer parte dessa<br class="hidden md:block" /><span
+              class="relative"
+              ><span class="focusDecorationBig"></span><span class="z-30">comunidade</span></span
+            >
+          </h3>
+          <p class="text-[16px] opensans text-c9 mt-2">
+            Não custa nada! Aproveite toda a plataforma totalmente gratis
+          </p>
+        </div>
+        <ButtonEmphasis>EU QUERO</ButtonEmphasis>
+      </div>
+      <div class="hidden lg:block">
+        <img src="../asserts/icons/messagesRight.svg" alt="Draw" />
       </div>
     </section>
   </article>
@@ -246,5 +314,17 @@ export default {};
   top: -5px;
   left: -15px;
   background-color: #c1d4ff;
+}
+.focusDecorationBig::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 20px;
+  border-radius: 5px;
+  left: 30px;
+  bottom:10px;
+  background-color: #c1d4ff;
+  z-index: -1;
 }
 </style>

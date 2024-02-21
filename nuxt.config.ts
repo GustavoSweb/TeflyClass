@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   alias: {
-    css:'/<rootDir>/asserts/css/main.css'
+    css:'/<rootDir>/asserts/css/'
   },
   modules:[['@nuxtjs/tailwindcss',{
     cssPath: '~/assets/css/main.css',

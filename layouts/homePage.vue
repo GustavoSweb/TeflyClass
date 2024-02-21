@@ -1,20 +1,54 @@
 <template>
   <div class="bg-c1">
-    <header class="flex poppins font-semibold  justify-between mb-[10vh] items-center md:px-[88px] pt-4">
+    <header
+      class="flex poppins font-semibold justify-between mb-[10vh] items-center md:px-[88px] pt-4"
+    >
       <h6 class="text-c5"><span class="text-b9">Tefly</span>Class</h6>
-      <ul class="flex gap-[50%] ">
+      <ul class="flex gap-[50%]">
         <li>Modelo</li>
         <li>Sobre</li>
         <li>Contato</li>
       </ul>
-      <ButtonDefault>
-        LOGIN
-      </ButtonDefault>
+      <ButtonDefault> LOGIN </ButtonDefault>
     </header>
     <slot> </slot>
-    <footer class="min-h-[373px] flex justify-between bg-c11 px-[90px] pt-[98px]">
-      <h6 class="text-c8 poppins font-semibold"><span class="text-b4">Tefly</span>Class</h6>
-      <div></div>
+    <footer
+      class="min-h-[373px]  bg-c12 px-[88px] relative pt-[98px] flex items-center flex-col"
+    >
+        <div class="flex flex-col gap-[100px] sm:gap-0 w-full sm:flex-row justify-between">
+          <h6 class="text-c8 poppins font-semibold">
+            <span class="text-b4">Tefly</span>Class
+          </h6>
+          <div class="flex flex-col md:flex-row gap-[100px] sm:gap-[200px]">
+            <div class="flex">
+              <hr class="transform rotate-90 w-10 border-2 border-c3 translate-y-4 rounded-xl" />
+              <div class="flex flex-col">
+                <h5 class="text-[24px] font-bold poppins text-b1">Sobre</h5>
+                <ul
+                  class="text-c6 poppins font-semibold text-[16px] flex flex-col gap-[5px] mt-[10px]"
+                >
+                  <li>Avaliações</li>
+                  <li>Atualizações</li>
+                  <li>Prova IA</li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex mb-[100px] sm:mb-0">
+              <hr class="transform rotate-90 w-10 border-2 border-c3 translate-y-4 rounded-xl" />
+              <div class="flex flex-col">
+                <h5 class="text-[24px] font-bold poppins text-b1">Contato</h5>
+                <ul
+                  class="text-c6 poppins font-semibold text-[16px] flex flex-col gap-[5px] mt-[10px]"
+                >
+                  <li>Linkedin</li>
+                  <li>teflyclass@gmail.com</li>
+                  <li>+55 87 99917-0852</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex absolute bottom-5 items-center"><p class="text-c6 ">Copyright &copy; 2024  </p> <hr class="  rotate-90 w-8 border-[1px] border-c8  rounded-xl" /> <p class="text-c6 ">Desenvolvedor Gustavo Rodrigues</p></div>
     </footer>
   </div>
 </template>
