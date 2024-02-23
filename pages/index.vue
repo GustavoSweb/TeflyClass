@@ -5,21 +5,21 @@
     >
       <section class="flex items-center flex-col">
         <h1
-          class="text-[10vw] md:text-[96px] font-semibold poppins leading-[12vw] md:leading-[106.6px] text-c13"
+          class="text-[12vw] md:text-[96px] font-semibold poppins leading-[14vw] md:leading-[106.6px] text-c13"
         >
-          TeflyClass onde sua<br class="hidden md:block" />vida fica mais
+          TeflyClass onde sua<br class="hidden md:block" /> vida fica mais
           facil<span class="text-b4">.</span>
         </h1>
-        <p class="poppins text-[20px] text-c10">
+        <p class="poppins text-[20px] text-c10 ">
           Tenha conhecimento das atividades, projetos e conteúdos escolares!
         </p>
       </section>
       <section class="flex gap-4 mt-[40px]">
-        <ButtonEmphasis> INICIAR </ButtonEmphasis>
+        <NuxtLink to="/login"><ButtonEmphasis> INICIAR </ButtonEmphasis></NuxtLink>
         <ButtonDefault> Sou desenvolvedor </ButtonDefault>
       </section>
     </section>
-    <section class="flex justify-end bg-c2 w-full px-[88px]">
+    <section class="flex justify-end bg-c2 w-full px-[10px] md:px-[88px]">
       <section
         class="flex justify-end w-full max-w-[1050px] transform translate-y-[-100px] relative"
       >
@@ -54,31 +54,31 @@
         ></div>
       </section>
     </section>
-    <section class="py-[150px] bg-c2 px-[88px]">
+    <section class="pt-[150px] pb-[50px] md:py-[150px] bg-c2 px-[10px] md:px-[88px]">
       <div class="relative">
         <div class="focusDecoration"></div>
         <h2
-          class="text-[64px] font-bold poppins leading-[72px] z-20 relative block text-c13"
+          class="text-[10vw] md:text-[64px] font-bold poppins leading-[12vw] md:leading-[72px] z-20 relative block text-c13"
         >
-          Sistemas avaliativos<br />e exploração<span class="text-b4">.</span>
+          Sistemas avaliativos<br class="hidden md:block"/> e exploração<span class="text-b4">.</span>
         </h2>
       </div>
     </section>
     <HomePageCarousel class="transform translate-y-[-100px]"/>
     <section
-      class="bg-b9 p-[10px] mt-[88px] md:p-[88px] flex justify-between max-h-[541px]"
+      class="bg-b9 p-[10px] mt-[88px] md:p-[88px] py-[50px] flex justify-between md:max-h-[541px]"
     >
       <div>
         <div>
           <h2
-            class="text-[8vw] md:text-[64px] poppins text-white font-bold leading-[10vw] md:leading-[72px]"
+            class="text-[10vw] md:text-[64px] poppins text-white font-bold leading-[12vw] md:leading-[72px]"
           >
             <span class="text-b3">Atualizações</span
-            ><br class="hidden md:block" />diárias
+            ><br/>diárias
             <ButtonSessionWhite class="inline">INICIAR</ButtonSessionWhite>
           </h2>
         </div>
-        <div class="flex gap-4 mt-[70px] gap-[70px]">
+        <div class="flex md:flex-row  mt-[50px] md:my-0 flex-col gap-4 md:mt-[70px] gap-[70px]">
           <div class="text-white max-w-[233px] w-full flex flex-col gap-3">
             <div><img src="../asserts/icons/document.svg" alt="" /></div>
             <div>
@@ -120,14 +120,14 @@
         </div>
       </div>
     </section>
-    <section class="pt-[200px] px-[88px]">
+    <section class="pt-[200px] px-[10px] md:px-[88px] ">
       <div>
         <h2
-          class="text-[8vw] md:text-[64px] poppins font-bold leading-[10vw] md:leading-[72px] text-c13"
+          class="text-[10vw] md:text-[64px] poppins font-bold text-center md:text-start leading-[12vw] md:leading-[72px] text-c13"
         >
           Provas feitas com IA<span class="text-b4">.</span>
         </h2>
-        <p class="text-[24px] opensans text-c7">
+        <p class="text-[20px] md:text-[24px] opensans text-c7 text-center md:text-start">
           Provas interativas e compartilháveis com<br class="hidden md:block" />
           inteligência artificial
         </p>
@@ -173,7 +173,7 @@
         </div>
       </div>
     </section>
-    <section class="flex justify-center lg:justify-between pt-[250px] pb-[50px] px-[88px]">
+    <section class="flex justify-center lg:justify-between pt-[250px] pb-[50px] px-[88px] text-center md:text-start">
       <div class="hidden lg:block">
         <img src="../asserts/icons/emailsLeft.svg" alt="Draw" />
       </div>
@@ -238,5 +238,17 @@ export default {};
   bottom:10px;
   background-color: #c1d4ff;
   z-index: -1;
+}
+@media(max-width:600px){
+  .focusDecorationBig::before {
+  content: "";
+  width: 50vw;
+  max-width: 300px;
+  height: 20px;
+  left: -50vw;
+  bottom:10px;
+  background-color: #c1d4ff;
+  z-index: -1;
+}
 }
 </style>

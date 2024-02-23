@@ -1,9 +1,9 @@
 <template>
-  <section class="flex flex-col items-center">
+  <section class="flex flex-col items-center px-[30px] md:px-0">
     <div class="flex flex-col items-center pb-[100px]">
-      <div class="flex w-full gap-[50px] max-w-[1000px]">
+      <div class="flex max-w-[100vw] md:max-w-[1000px] p-4 md:p-[15px] gap-[50px] max-w-[1000px] overflow-x-scroll md:overflow-auto">
         <div
-          class="p-[25px] flex flex-col gap-2 w-full h-[225px] bg-[#FEFEFE] shadow-sm rounded-2xl ease-in-out transform duration-500"
+          class="p-[25px] flex flex-col gap-2 min-w-[300px] md:min-w-[0px] md:w-full h-[225px] bg-[#FEFEFE] shadow-sm rounded-2xl ease-in-out transform duration-500"
           v-for="item in items"
           :key="item.title"
           :ref="item.url"
@@ -45,7 +45,9 @@
         'rounded-2xl',
         'transform',
         'translate-y-[-50px]',
-        'h-[642px]',
+        'md:h-[642px]',
+        'h-[400px]',
+        'mx-[30px]',
         `${itemSelect.url}`,
       ]"
     ></div>
@@ -53,6 +55,9 @@
 </template>
 <script>
 export default {
+mounted(){
+  this.$refs['imgCarousel1'][0].classList.add('cardSelect')
+},
   data() {
     return {
       items: [
@@ -100,5 +105,10 @@ export default {
 .cardSelect{
     transform: translateY(-15px);
     box-shadow: 0px 6px 20px -2px #00000015;
+}
+@media(max-width:600px){
+  .cardSelect{
+    transform: translateY(0px);
+  }
 }
 </style>
