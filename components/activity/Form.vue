@@ -39,6 +39,12 @@
     <select name="" id="" v-model="matterSelect">
       <option :value="matter.id" v-for="matter in matters" :key="matter.id">{{ matter.name }}</option>
     </select>
+    <div class="flex gap-5 flex-wrap">
+      <div v-for="classroom in classrooms" :key="classroom.id" class="flex gap-2 items-center">
+        <input type="checkbox" :value="classroom.id" @click="classroomSelectEvent">
+        <label for="">Sala {{ classroom.num }}</label>
+      </div>
+    </div>
     <div
       @drop.prevent="dropFileOn"
       @dragover.prevent
@@ -59,6 +65,7 @@
 </template>
 
 <script>
+import Services from '~/services/index';
 export default {
   data() {
     return {
@@ -68,36 +75,37 @@ export default {
       shipping: "",
       file: "",
       matters: [],
-      matterSelect: ''
+      matterSelect: '',
+      classrooms:[],
+      classroomsSelect:[]
     };
   },
   async created(){
-      const res = await $fetch("http://localhost:8081/matter", {
-        method: "GET",
-      });
-      this.matters = res
-      console.log(this.matters)
+    try{
+      this.matters = await Services.Matter.GetAll()
+      this.classrooms = await Services.Classroom.GetAll()
+    }catch(err){
+      console.error(err)
+    }
   },
   methods: {
+    classroomSelectEvent(element){
+      if(!element.target.value) return
+      this.classroomsSelect.push(element.target.value)
+    },
     dropFileOn(e) {
       this.file = e.dataTransfer.files[0];
     },
     async SendForm() {
-      const options = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
+      const res = await Services.Activity.Create({
           title: this.title,
           description: this.description,
-          delivery: new Date(this.delivery),
-          shipping: new Date(this.shipping),
+          delivery: this.delivery,
+          shipping: this.shipping,
           bimester_id: 1,
-          matter_id: Number(this.matterSelect),
-        }),
-      };
-      const res = await $fetch("http://localhost:8081/activity", options);
+          matter_id: this.matterSelect,
+          classrooms:this.classroomsSelect
+        })
       console.log(this.file);
       const formData = new FormData();
       formData.append("file", this.file);
