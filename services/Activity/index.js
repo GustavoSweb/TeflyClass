@@ -23,8 +23,10 @@ class Activity{
           return await res.json()
     }
     async GetAll({finished, matters, bimester_id}){
-      
-      const res = await fetch(`${this.routerDefault}/activity?matters=${matters}&bimester_id=${bimester_id}&finished=${finished}$`, {method:'GET'})
+      let options = matters ?`matters=${matters}&` : null
+      options = bimester_id ? `${options}bimester_id=${bimester_id}&` : options
+      options = finished ? `${options}finished=${finished}$` : options
+      const res = await fetch(`${this.routerDefault}/activity?${options ? options : ''}`, {method:'GET'})
       
       return await res.json()
     }
