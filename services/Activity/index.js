@@ -30,6 +30,11 @@ class Activity{
       
       return await res.json()
     }
+    async Search(text){
+
+      const res = await fetch(`${this.routerDefault}/activity/search/${text}`, {method:'GET'})
+      return await res.json()
+    }
 }
 
 export default Activity
